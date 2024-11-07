@@ -1,0 +1,17 @@
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-8">Sản phẩm</h2>
+
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a *ngFor="let product of products" href="#" class="group relative block border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform transition-transform duration-200 hover:scale-105">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img [src]="product.image" [alt]="product.description" class="h-full w-full object-cover object-center transition-opacity duration-200 group-hover:opacity-80">
+        </div>
+        <div class="p-4">
+          <h3 class="mt-2 text-sm font-semibold text-gray-800">{{ product.name }}</h3>
+          <p class="mt-1 text-lg font-semibold text-gray-900">${{ product.price }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
